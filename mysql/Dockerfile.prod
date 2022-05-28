@@ -1,0 +1,7 @@
+FROM mysql:5.7
+
+# CMD [ "--innodb-use-native-aio=0" ]
+
+# Adicionando os scripts SQL para serem executados na criação do banco
+COPY ./sql-scripts/ /docker-entrypoint-initdb.d/
+# COPY ./sql-scripts/ /data/application/
